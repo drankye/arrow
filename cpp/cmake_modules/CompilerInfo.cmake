@@ -40,7 +40,8 @@ elseif("${COMPILER_VERSION_FULL}" MATCHES ".*gcc version.*")
   string(REGEX REPLACE ".*gcc version ([0-9\\.]+).*" "\\1"
     COMPILER_VERSION "${COMPILER_VERSION_FULL}")
 else()
-  message(FATAL_ERROR "Unknown compiler. Version info:\n${COMPILER_VERSION_FULL}")
+  #message(FATAL_ERROR "Unknown compiler. Version info:\n${COMPILER_VERSION_FULL}")
+  message("Unknown compiler. Version info:\n${COMPILER_VERSION_FULL}")
 endif()
 message("Selected compiler ${COMPILER_FAMILY} ${COMPILER_VERSION}")
 

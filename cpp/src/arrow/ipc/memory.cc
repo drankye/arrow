@@ -17,7 +17,7 @@
 
 #include "arrow/ipc/memory.h"
 
-#include <sys/mman.h> // For memory-mapping
+//#include <sys/mman.h> // For memory-mapping
 #include <algorithm>
 #include <cerrno>
 #include <cstdint>
@@ -48,7 +48,7 @@ class MemoryMappedSource::Impl {
 
   ~Impl() {
     if (is_open_) {
-      munmap(data_, size_);
+      //munmap(data_, size_);
       fclose(file_);
     }
   }
@@ -81,9 +81,9 @@ class MemoryMappedSource::Impl {
     is_open_ = true;
 
     // TODO(wesm): Add read-only version of this
-    data_ = reinterpret_cast<uint8_t*>(mmap(nullptr, size_,
-            PROT_READ | PROT_WRITE,
-            MAP_SHARED, fileno(file_), 0));
+    //data_ = reinterpret_cast<uint8_t*>(mmap(nullptr, size_,
+    //        PROT_READ | PROT_WRITE,
+    //        MAP_SHARED, fileno(file_), 0));
     if (data_ == nullptr) {
       std::stringstream ss;
       ss << "Memory mapping file failed, errno: " << errno;
