@@ -30,10 +30,11 @@ set(THIRDPARTY_DIR "${CMAKE_SOURCE_DIR}/thirdparty")
 # Must be declared in the top-level CMakeLists.txt.
 set(CMAKE_SKIP_INSTALL_ALL_DEPENDENCY true)
 
-# Generate a Clang compile_commands.json "compilation database" file for use
-# with various development tools, such as Vim's YouCompleteMe plugin.
-# See http://clang.llvm.org/docs/JSONCompilationDatabase.html
-if ("$ENV{CMAKE_EXPORT_COMPILE_COMMANDS}" STREQUAL "1")
+find_package(ClangTools)
+if ("$ENV{CMAKE_EXPORT_COMPILE_COMMANDS}" STREQUAL "1" OR CLANG_TIDY_FOUND)
+  # Generate a Clang compile_commands.json "compilation database" file for use
+  # with various development tools, such as Vim's YouCompleteMe plugin.
+  # See http://clang.llvm.org/docs/JSONCompilationDatabase.html
   set(CMAKE_EXPORT_COMPILE_COMMANDS 1)
 endif()
 
@@ -66,6 +67,14 @@ if("${CMAKE_SOURCE_DIR}" STREQUAL "${CMAKE_CURRENT_SOURCE_DIR}")
     "Build the Arrow IPC extensions"
     ON)
 
+  option(ARROW_SSE3
+    "Build Arrow with SSE3"
+    ON)
+
+  option(ARROW_ALTIVEC
+    "Build Arrow with Altivec"
+    ON)
+
 endif()
 
 if(NOT ARROW_BUILD_TESTS)
@@ -81,9 +90,25 @@ endif()
 # Compiler flags
 ############################################################
 
+# Check if the target architecture and compiler supports some special
+# instruction sets that would boost performance.
+include(CheckCXXCompilerFlag)
+# x86/amd64 compiler flags
+CHECK_CXX_COMPILER_FLAG("-msse3" CXX_SUPPORTS_SSE3)
+# power compiler flags
+CHECK_CXX_COMPILER_FLAG("-maltivec" CXX_SUPPORTS_ALTIVEC)
+
 # compiler flags that are common across debug/release builds
 #  - Wall: Enable all warnings.
-set(CXX_COMMON_FLAGS "-std=c++11 -msse3 -Wall")
+set(CXX_COMMON_FLAGS "-std=c++11 -Wall")
+
+# Only enable additional instruction sets if they are supported
+if (CXX_SUPPORTS_SSE3 AND ARROW_SSE3)
+    set(CXX_COMMON_FLAGS "${CXX_COMMON_FLAGS} -msse3")
+endif()
+if (CXX_SUPPORTS_ALTIVEC AND ARROW_ALTIVEC)
+    set(CXX_COMMON_FLAGS "${CXX_COMMON_FLAGS} -maltivec")
+endif()
 
 if (APPLE)
   # Depending on the default OSX_DEPLOYMENT_TARGET (< 10.9), libstdc++ may be
@@ -515,6 +540,36 @@ if (UNIX)
   --filter=-whitespace/comments,-readability/todo,-build/header_guard,-build/c++11,-runtime/references
     `find ${CMAKE_CURRENT_SOURCE_DIR}/src -name \\*.cc -or -name \\*.h | sed -e '/_generated/g'`)
 endif (UNIX)
+
+
+############################################################
+# "make format" and "make check-format" targets
+############################################################
+if (${CLANG_FORMAT_FOUND})
+  # runs clang format and updates files in place.
+  add_custom_target(format ${BUILD_SUPPORT_DIR}/run-clang-format.sh ${CMAKE_CURRENT_SOURCE_DIR} ${CLANG_FORMAT_BIN} 1
+  `find ${CMAKE_CURRENT_SOURCE_DIR}/src -name \\*.cc -or -name \\*.h | sed -e '/_generated/g'`)
+
+  # runs clang format and exits with a non-zero exit code if any files need to be reformatted
+  add_custom_target(check-format ${BUILD_SUPPORT_DIR}/run-clang-format.sh ${CMAKE_CURRENT_SOURCE_DIR} ${CLANG_FORMAT_BIN} 0
+  `find ${CMAKE_CURRENT_SOURCE_DIR}/src -name \\*.cc -or -name \\*.h | sed -e '/_generated/g'`)
+endif()
+
+
+############################################################
+# "make clang-tidy" and "make check-clang-tidy" targets
+############################################################
+if (${CLANG_TIDY_FOUND})
+  # runs clang-tidy and attempts to fix any warning automatically
+  add_custom_target(clang-tidy ${BUILD_SUPPORT_DIR}/run-clang-tidy.sh ${CLANG_TIDY_BIN} ${CMAKE_BINARY_DIR}/compile_commands.json 1
+  `find ${CMAKE_CURRENT_SOURCE_DIR}/src -name \\*.cc | sed -e '/_generated/g'`)
+  # runs clang-tidy and exits with a non-zero exit code if any errors are found.
+  add_custom_target(check-clang-tidy ${BUILD_SUPPORT_DIR}/run-clang-tidy.sh ${CLANG_TIDY_BIN} ${CMAKE_BINARY_DIR}/compile_commands.json 
+  0 `find ${CMAKE_CURRENT_SOURCE_DIR}/src -name \\*.cc | sed -e '/_generated/g'`)
+
+endif()
+
+
 
 ############################################################
 # Subdirectories

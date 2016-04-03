@@ -32,8 +32,7 @@
 namespace arrow {
 namespace ipc {
 
-MemorySource::MemorySource(AccessMode access_mode) :
-    access_mode_(access_mode) {}
+MemorySource::MemorySource(AccessMode access_mode) : access_mode_(access_mode) {}
 
 MemorySource::~MemorySource() {}
 
@@ -41,10 +40,7 @@ MemorySource::~MemorySource() {}
 
 class MemoryMappedSource::Impl {
  public:
-  Impl() :
-      file_(nullptr),
-      is_open_(false),
-      data_(nullptr) {}
+  Impl() : file_(nullptr), is_open_(false), data_(nullptr) {}
 
   ~Impl() {
     if (is_open_) {
@@ -54,9 +50,7 @@ class MemoryMappedSource::Impl {
   }
 
   Status Open(const std::string& path, MemorySource::AccessMode mode) {
-    if (is_open_) {
-      return Status::IOError("A file is already open");
-    }
+    if (is_open_) { return Status::IOError("A file is already open"); }
 
     path_ = path;
 
@@ -72,9 +66,7 @@ class MemoryMappedSource::Impl {
     }
 
     fseek(file_, 0L, SEEK_END);
-    if (ferror(file_)) {
-      return Status::IOError("Unable to seek to end of file");
-    }
+    if (ferror(file_)) { return Status::IOError("Unable to seek to end of file"); }
     size_ = ftell(file_);
 
     fseek(file_, 0L, SEEK_SET);
@@ -93,13 +85,9 @@ class MemoryMappedSource::Impl {
     return Status::OK();
   }
 
-  int64_t size() const {
-    return size_;
-  }
+  int64_t size() const { return size_; }
 
-  uint8_t* data() {
-    return data_;
-  }
+  uint8_t* data() { return data_; }
 
  private:
   std::string path_;
@@ -111,8 +99,8 @@ class MemoryMappedSource::Impl {
   uint8_t* data_;
 };
 
-MemoryMappedSource::MemoryMappedSource(AccessMode access_mode) :
-    MemorySource(access_mode) {}
+MemoryMappedSource::MemoryMappedSource(AccessMode access_mode)
+    : MemorySource(access_mode) {}
 
 Status MemoryMappedSource::Open(const std::string& path, AccessMode access_mode,
     std::shared_ptr<MemoryMappedSource>* out) {
@@ -134,8 +122,8 @@ Status MemoryMappedSource::Close() {
   return Status::OK();
 }
 
-Status MemoryMappedSource::ReadAt(int64_t position, int64_t nbytes,
-    std::shared_ptr<Buffer>* out) {
+Status MemoryMappedSource::ReadAt(
+    int64_t position, int64_t nbytes, std::shared_ptr<Buffer>* out) {
   if (position < 0 || position >= impl_->size()) {
     return Status::Invalid("position is out of bounds");
   }
@@ -145,8 +133,7 @@ Status MemoryMappedSource::ReadAt(int64_t position, int64_t nbytes,
   return Status::OK();
 }
 
-Status MemoryMappedSource::Write(int64_t position, const uint8_t* data,
-    int64_t nbytes) {
+Status MemoryMappedSource::Write(int64_t position, const uint8_t* data, int64_t nbytes) {
   if (position < 0 || position >= impl_->size()) {
     return Status::Invalid("position is out of bounds");
   }
@@ -158,5 +145,5 @@ Status MemoryMappedSource::Write(int64_t position, const uint8_t* data,
   return Status::OK();
 }
 
-} // namespace ipc
-} // namespace arrow
+}  // namespace ipc
+}  // namespace arrow
