@@ -57,13 +57,12 @@ class Buffer : public std::enable_shared_from_this<Buffer> {
   bool Equals(const Buffer& other, int64_t nbytes) const {
     return this == &other ||
       (size_ >= nbytes && other.size_ >= nbytes &&
-          (data_ == other.data_ || !memcmp(data_, other.data_, nbytes)));
+          !memcmp(data_, other.data_, nbytes));
   }
 
   bool Equals(const Buffer& other) const {
     return this == &other ||
-      (size_ == other.size_ && (data_ == other.data_ || 
-		  !memcmp(data_, other.data_, size_)));
+      (size_ == other.size_ && !memcmp(data_, other.data_, size_));
   }
 
   const uint8_t* data() const {
