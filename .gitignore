@@ -24,3 +24,4 @@ cpp/src/arrow/util/bit-util-test.dir/
 cpp/src/arrow/util/buffer-test.dir/
 cpp/src/arrow/util/memory-pool-test.dir/
 cpp/x64/
+cpp/src/arrow/util/Debug/
