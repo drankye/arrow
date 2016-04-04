@@ -1,0 +1,354 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|x64">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|x64">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGUID>{06C472BE-4676-4457-A8DF-75ED7AFEBA33}</ProjectGUID>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>x64</Platform>
+    <ProjectName>arrow</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+    <PropertyGroup>
+      <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\work\projects\arrow\cpp\Debug\</OutDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">arrow.dir\Debug\</IntDir>
+      <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">arrow</TargetName>
+      <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.dll</TargetExt>
+      <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
+      <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</GenerateManifest>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\work\projects\arrow\cpp\Release\</OutDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">arrow.dir\Release\</IntDir>
+      <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">arrow</TargetName>
+      <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.dll</TargetExt>
+      <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
+      <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</GenerateManifest>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\work\projects\arrow\cpp\MinSizeRel\</OutDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">arrow.dir\MinSizeRel\</IntDir>
+      <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">arrow</TargetName>
+      <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">.dll</TargetExt>
+      <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkIncremental>
+      <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">true</GenerateManifest>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\work\projects\arrow\cpp\RelWithDebInfo\</OutDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">arrow.dir\RelWithDebInfo\</IntDir>
+      <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">arrow</TargetName>
+      <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">.dll</TargetExt>
+      <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</LinkIncremental>
+      <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</GenerateManifest>
+    </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalOptions> -std=c++11 -ggdb -O0 -fPIC %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalIncludeDirectories>C:\work\projects\arrow\cpp\src;C:\work\projects\arrow\cpp\thirdparty\googletest-release-1.7.0\include;C:\work\projects\arrow\cpp\thirdparty\installed\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>Debug/</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <WarningLevel>EnableAllWarnings</WarningLevel>
+      <PreprocessorDefinitions>_DEBUG;CMAKE_INTDIR="Debug";arrow_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;CMAKE_INTDIR=\"Debug\";arrow_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\work\projects\arrow\cpp\src;C:\work\projects\arrow\cpp\thirdparty\googletest-release-1.7.0\include;C:\work\projects\arrow\cpp\thirdparty\installed\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\work\projects\arrow\cpp\src;C:\work\projects\arrow\cpp\thirdparty\googletest-release-1.7.0\include;C:\work\projects\arrow\cpp\thirdparty\installed\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalOptions> /machine:x64 /debug %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/work/projects/arrow/cpp/build/debug/Debug/arrow.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/work/projects/arrow/cpp/Debug/arrow.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+      <Version></Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalOptions> -std=c++11 -ggdb -O0 -fPIC %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalIncludeDirectories>C:\work\projects\arrow\cpp\src;C:\work\projects\arrow\cpp\thirdparty\googletest-release-1.7.0\include;C:\work\projects\arrow\cpp\thirdparty\installed\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>Release/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <WarningLevel>EnableAllWarnings</WarningLevel>
+      <PreprocessorDefinitions>NDEBUG;CMAKE_INTDIR="Release";arrow_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat></DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;CMAKE_INTDIR=\"Release\";arrow_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\work\projects\arrow\cpp\src;C:\work\projects\arrow\cpp\thirdparty\googletest-release-1.7.0\include;C:\work\projects\arrow\cpp\thirdparty\installed\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\work\projects\arrow\cpp\src;C:\work\projects\arrow\cpp\thirdparty\googletest-release-1.7.0\include;C:\work\projects\arrow\cpp\thirdparty\installed\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalOptions> /machine:x64 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/work/projects/arrow/cpp/build/debug/Release/arrow.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/work/projects/arrow/cpp/Release/arrow.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+      <Version></Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+    <ClCompile>
+      <AdditionalOptions> -std=c++11 -ggdb -O0 -fPIC %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalIncludeDirectories>C:\work\projects\arrow\cpp\src;C:\work\projects\arrow\cpp\thirdparty\googletest-release-1.7.0\include;C:\work\projects\arrow\cpp\thirdparty\installed\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>MinSizeRel/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <WarningLevel>EnableAllWarnings</WarningLevel>
+      <PreprocessorDefinitions>NDEBUG;CMAKE_INTDIR="MinSizeRel";arrow_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat></DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;CMAKE_INTDIR=\"MinSizeRel\";arrow_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\work\projects\arrow\cpp\src;C:\work\projects\arrow\cpp\thirdparty\googletest-release-1.7.0\include;C:\work\projects\arrow\cpp\thirdparty\installed\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\work\projects\arrow\cpp\src;C:\work\projects\arrow\cpp\thirdparty\googletest-release-1.7.0\include;C:\work\projects\arrow\cpp\thirdparty\installed\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalOptions> /machine:x64 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/work/projects/arrow/cpp/build/debug/MinSizeRel/arrow.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/work/projects/arrow/cpp/MinSizeRel/arrow.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+      <Version></Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    <ClCompile>
+      <AdditionalOptions> -std=c++11 -ggdb -O0 -fPIC %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalIncludeDirectories>C:\work\projects\arrow\cpp\src;C:\work\projects\arrow\cpp\thirdparty\googletest-release-1.7.0\include;C:\work\projects\arrow\cpp\thirdparty\installed\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>RelWithDebInfo/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <WarningLevel>EnableAllWarnings</WarningLevel>
+      <PreprocessorDefinitions>NDEBUG;CMAKE_INTDIR="RelWithDebInfo";arrow_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;CMAKE_INTDIR=\"RelWithDebInfo\";arrow_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\work\projects\arrow\cpp\src;C:\work\projects\arrow\cpp\thirdparty\googletest-release-1.7.0\include;C:\work\projects\arrow\cpp\thirdparty\installed\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\work\projects\arrow\cpp\src;C:\work\projects\arrow\cpp\thirdparty\googletest-release-1.7.0\include;C:\work\projects\arrow\cpp\thirdparty\installed\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalOptions> /machine:x64 /debug %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/work/projects/arrow/cpp/build/debug/RelWithDebInfo/arrow.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/work/projects/arrow/cpp/RelWithDebInfo/arrow.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+      <Version></Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\work\projects\arrow\cpp\CMakeLists.txt">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/work/projects/arrow/cpp/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+C:\work\cmake\bin\cmake.exe -HC:/work/projects/arrow/cpp -BC:/work/projects/arrow/cpp --check-stamp-file C:\work\projects\arrow\cpp\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/work/projects/arrow/cpp/CMakeLists.txt;C:\work\projects\arrow\cpp\CMakeLists.txt;C:\work\projects\arrow\cpp\CMakeFiles\3.3.2\CMakeSystem.cmake;C:\work\cmake\share\cmake-3.3\Modules\CMakeSystemSpecificInitialize.cmake;C:\work\projects\arrow\cpp\CMakeFiles\3.3.2\CMakeCCompiler.cmake;C:\work\projects\arrow\cpp\CMakeFiles\3.3.2\CMakeCXXCompiler.cmake;C:\work\cmake\share\cmake-3.3\Modules\CMakeSystemSpecificInformation.cmake;C:\work\cmake\share\cmake-3.3\Modules\CMakeGenericSystem.cmake;C:\work\cmake\share\cmake-3.3\Modules\Platform\Windows.cmake;C:\work\cmake\share\cmake-3.3\Modules\Platform\WindowsPaths.cmake;C:\work\cmake\share\cmake-3.3\Modules\CMakeCInformation.cmake;C:\work\cmake\share\cmake-3.3\Modules\Platform\Windows-MSVC-C.cmake;C:\work\cmake\share\cmake-3.3\Modules\Platform\Windows-MSVC.cmake;C:\work\projects\arrow\cpp\CMakeFiles\3.3.2\CMakeRCCompiler.cmake;C:\work\cmake\share\cmake-3.3\Modules\CMakeRCInformation.cmake;C:\work\cmake\share\cmake-3.3\Modules\CMakeCommonLanguageInclude.cmake;C:\work\cmake\share\cmake-3.3\Modules\CMakeCXXInformation.cmake;C:\work\cmake\share\cmake-3.3\Modules\Compiler\MSVC-CXX.cmake;C:\work\cmake\share\cmake-3.3\Modules\Platform\Windows-MSVC-CXX.cmake;C:\work\cmake\share\cmake-3.3\Modules\Platform\Windows-MSVC.cmake;C:\work\cmake\share\cmake-3.3\Modules\CMakeCommonLanguageInclude.cmake;C:\work\cmake\share\cmake-3.3\Modules\CMakeParseArguments.cmake;C:\work\projects\arrow\cpp\cmake_modules\FindClangTools.cmake;C:\work\cmake\share\cmake-3.3\Modules\CheckCXXCompilerFlag.cmake;C:\work\cmake\share\cmake-3.3\Modules\CheckCXXSourceCompiles.cmake;C:\work\cmake\share\cmake-3.3\Modules\CMakeCheckCompilerFlagCommonPatterns.cmake;C:\work\projects\arrow\cpp\cmake_modules\CompilerInfo.cmake;C:\work\projects\arrow\cpp\cmake_modules\san-config.cmake;C:\work\projects\arrow\cpp\cmake_modules\FindGTest.cmake;C:\work\projects\arrow\cpp\cmake_modules\FindFlatbuffers.cmake;C:\work\projects\arrow\cpp\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\work\projects\arrow\cpp\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/work/projects/arrow/cpp/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+C:\work\cmake\bin\cmake.exe -HC:/work/projects/arrow/cpp -BC:/work/projects/arrow/cpp --check-stamp-file C:\work\projects\arrow\cpp\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/work/projects/arrow/cpp/CMakeLists.txt;C:\work\projects\arrow\cpp\CMakeLists.txt;C:\work\projects\arrow\cpp\CMakeFiles\3.3.2\CMakeSystem.cmake;C:\work\cmake\share\cmake-3.3\Modules\CMakeSystemSpecificInitialize.cmake;C:\work\projects\arrow\cpp\CMakeFiles\3.3.2\CMakeCCompiler.cmake;C:\work\projects\arrow\cpp\CMakeFiles\3.3.2\CMakeCXXCompiler.cmake;C:\work\cmake\share\cmake-3.3\Modules\CMakeSystemSpecificInformation.cmake;C:\work\cmake\share\cmake-3.3\Modules\CMakeGenericSystem.cmake;C:\work\cmake\share\cmake-3.3\Modules\Platform\Windows.cmake;C:\work\cmake\share\cmake-3.3\Modules\Platform\WindowsPaths.cmake;C:\work\cmake\share\cmake-3.3\Modules\CMakeCInformation.cmake;C:\work\cmake\share\cmake-3.3\Modules\Platform\Windows-MSVC-C.cmake;C:\work\cmake\share\cmake-3.3\Modules\Platform\Windows-MSVC.cmake;C:\work\projects\arrow\cpp\CMakeFiles\3.3.2\CMakeRCCompiler.cmake;C:\work\cmake\share\cmake-3.3\Modules\CMakeRCInformation.cmake;C:\work\cmake\share\cmake-3.3\Modules\CMakeCommonLanguageInclude.cmake;C:\work\cmake\share\cmake-3.3\Modules\CMakeCXXInformation.cmake;C:\work\cmake\share\cmake-3.3\Modules\Compiler\MSVC-CXX.cmake;C:\work\cmake\share\cmake-3.3\Modules\Platform\Windows-MSVC-CXX.cmake;C:\work\cmake\share\cmake-3.3\Modules\Platform\Windows-MSVC.cmake;C:\work\cmake\share\cmake-3.3\Modules\CMakeCommonLanguageInclude.cmake;C:\work\cmake\share\cmake-3.3\Modules\CMakeParseArguments.cmake;C:\work\projects\arrow\cpp\cmake_modules\FindClangTools.cmake;C:\work\cmake\share\cmake-3.3\Modules\CheckCXXCompilerFlag.cmake;C:\work\cmake\share\cmake-3.3\Modules\CheckCXXSourceCompiles.cmake;C:\work\cmake\share\cmake-3.3\Modules\CMakeCheckCompilerFlagCommonPatterns.cmake;C:\work\projects\arrow\cpp\cmake_modules\CompilerInfo.cmake;C:\work\projects\arrow\cpp\cmake_modules\san-config.cmake;C:\work\projects\arrow\cpp\cmake_modules\FindGTest.cmake;C:\work\projects\arrow\cpp\cmake_modules\FindFlatbuffers.cmake;C:\work\projects\arrow\cpp\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\work\projects\arrow\cpp\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule C:/work/projects/arrow/cpp/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+C:\work\cmake\bin\cmake.exe -HC:/work/projects/arrow/cpp -BC:/work/projects/arrow/cpp --check-stamp-file C:\work\projects\arrow\cpp\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:/work/projects/arrow/cpp/CMakeLists.txt;C:\work\projects\arrow\cpp\CMakeLists.txt;C:\work\projects\arrow\cpp\CMakeFiles\3.3.2\CMakeSystem.cmake;C:\work\cmake\share\cmake-3.3\Modules\CMakeSystemSpecificInitialize.cmake;C:\work\projects\arrow\cpp\CMakeFiles\3.3.2\CMakeCCompiler.cmake;C:\work\projects\arrow\cpp\CMakeFiles\3.3.2\CMakeCXXCompiler.cmake;C:\work\cmake\share\cmake-3.3\Modules\CMakeSystemSpecificInformation.cmake;C:\work\cmake\share\cmake-3.3\Modules\CMakeGenericSystem.cmake;C:\work\cmake\share\cmake-3.3\Modules\Platform\Windows.cmake;C:\work\cmake\share\cmake-3.3\Modules\Platform\WindowsPaths.cmake;C:\work\cmake\share\cmake-3.3\Modules\CMakeCInformation.cmake;C:\work\cmake\share\cmake-3.3\Modules\Platform\Windows-MSVC-C.cmake;C:\work\cmake\share\cmake-3.3\Modules\Platform\Windows-MSVC.cmake;C:\work\projects\arrow\cpp\CMakeFiles\3.3.2\CMakeRCCompiler.cmake;C:\work\cmake\share\cmake-3.3\Modules\CMakeRCInformation.cmake;C:\work\cmake\share\cmake-3.3\Modules\CMakeCommonLanguageInclude.cmake;C:\work\cmake\share\cmake-3.3\Modules\CMakeCXXInformation.cmake;C:\work\cmake\share\cmake-3.3\Modules\Compiler\MSVC-CXX.cmake;C:\work\cmake\share\cmake-3.3\Modules\Platform\Windows-MSVC-CXX.cmake;C:\work\cmake\share\cmake-3.3\Modules\Platform\Windows-MSVC.cmake;C:\work\cmake\share\cmake-3.3\Modules\CMakeCommonLanguageInclude.cmake;C:\work\cmake\share\cmake-3.3\Modules\CMakeParseArguments.cmake;C:\work\projects\arrow\cpp\cmake_modules\FindClangTools.cmake;C:\work\cmake\share\cmake-3.3\Modules\CheckCXXCompilerFlag.cmake;C:\work\cmake\share\cmake-3.3\Modules\CheckCXXSourceCompiles.cmake;C:\work\cmake\share\cmake-3.3\Modules\CMakeCheckCompilerFlagCommonPatterns.cmake;C:\work\projects\arrow\cpp\cmake_modules\CompilerInfo.cmake;C:\work\projects\arrow\cpp\cmake_modules\san-config.cmake;C:\work\projects\arrow\cpp\cmake_modules\FindGTest.cmake;C:\work\projects\arrow\cpp\cmake_modules\FindFlatbuffers.cmake;C:\work\projects\arrow\cpp\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\work\projects\arrow\cpp\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule C:/work/projects/arrow/cpp/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+C:\work\cmake\bin\cmake.exe -HC:/work/projects/arrow/cpp -BC:/work/projects/arrow/cpp --check-stamp-file C:\work\projects\arrow\cpp\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:/work/projects/arrow/cpp/CMakeLists.txt;C:\work\projects\arrow\cpp\CMakeLists.txt;C:\work\projects\arrow\cpp\CMakeFiles\3.3.2\CMakeSystem.cmake;C:\work\cmake\share\cmake-3.3\Modules\CMakeSystemSpecificInitialize.cmake;C:\work\projects\arrow\cpp\CMakeFiles\3.3.2\CMakeCCompiler.cmake;C:\work\projects\arrow\cpp\CMakeFiles\3.3.2\CMakeCXXCompiler.cmake;C:\work\cmake\share\cmake-3.3\Modules\CMakeSystemSpecificInformation.cmake;C:\work\cmake\share\cmake-3.3\Modules\CMakeGenericSystem.cmake;C:\work\cmake\share\cmake-3.3\Modules\Platform\Windows.cmake;C:\work\cmake\share\cmake-3.3\Modules\Platform\WindowsPaths.cmake;C:\work\cmake\share\cmake-3.3\Modules\CMakeCInformation.cmake;C:\work\cmake\share\cmake-3.3\Modules\Platform\Windows-MSVC-C.cmake;C:\work\cmake\share\cmake-3.3\Modules\Platform\Windows-MSVC.cmake;C:\work\projects\arrow\cpp\CMakeFiles\3.3.2\CMakeRCCompiler.cmake;C:\work\cmake\share\cmake-3.3\Modules\CMakeRCInformation.cmake;C:\work\cmake\share\cmake-3.3\Modules\CMakeCommonLanguageInclude.cmake;C:\work\cmake\share\cmake-3.3\Modules\CMakeCXXInformation.cmake;C:\work\cmake\share\cmake-3.3\Modules\Compiler\MSVC-CXX.cmake;C:\work\cmake\share\cmake-3.3\Modules\Platform\Windows-MSVC-CXX.cmake;C:\work\cmake\share\cmake-3.3\Modules\Platform\Windows-MSVC.cmake;C:\work\cmake\share\cmake-3.3\Modules\CMakeCommonLanguageInclude.cmake;C:\work\cmake\share\cmake-3.3\Modules\CMakeParseArguments.cmake;C:\work\projects\arrow\cpp\cmake_modules\FindClangTools.cmake;C:\work\cmake\share\cmake-3.3\Modules\CheckCXXCompilerFlag.cmake;C:\work\cmake\share\cmake-3.3\Modules\CheckCXXSourceCompiles.cmake;C:\work\cmake\share\cmake-3.3\Modules\CMakeCheckCompilerFlagCommonPatterns.cmake;C:\work\projects\arrow\cpp\cmake_modules\CompilerInfo.cmake;C:\work\projects\arrow\cpp\cmake_modules\san-config.cmake;C:\work\projects\arrow\cpp\cmake_modules\FindGTest.cmake;C:\work\projects\arrow\cpp\cmake_modules\FindFlatbuffers.cmake;C:\work\projects\arrow\cpp\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\work\projects\arrow\cpp\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="C:\work\projects\arrow\cpp\src\arrow\array.cc"  />
+    <ClCompile Include="C:\work\projects\arrow\cpp\src\arrow\builder.cc"  />
+    <ClCompile Include="C:\work\projects\arrow\cpp\src\arrow\column.cc"  />
+    <ClCompile Include="C:\work\projects\arrow\cpp\src\arrow\schema.cc"  />
+    <ClCompile Include="C:\work\projects\arrow\cpp\src\arrow\table.cc"  />
+    <ClCompile Include="C:\work\projects\arrow\cpp\src\arrow\type.cc"  />
+    <ClCompile Include="C:\work\projects\arrow\cpp\src\arrow\ipc\adapter.cc"  />
+    <ClCompile Include="C:\work\projects\arrow\cpp\src\arrow\ipc\memory.cc"  />
+    <ClCompile Include="C:\work\projects\arrow\cpp\src\arrow\ipc\metadata.cc"  />
+    <ClCompile Include="C:\work\projects\arrow\cpp\src\arrow\ipc\metadata-internal.cc"  />
+    <ClCompile Include="C:\work\projects\arrow\cpp\src\arrow\types\construct.cc"  />
+    <ClCompile Include="C:\work\projects\arrow\cpp\src\arrow\types\decimal.cc"  />
+    <ClCompile Include="C:\work\projects\arrow\cpp\src\arrow\types\json.cc"  />
+    <ClCompile Include="C:\work\projects\arrow\cpp\src\arrow\types\list.cc"  />
+    <ClCompile Include="C:\work\projects\arrow\cpp\src\arrow\types\primitive.cc"  />
+    <ClCompile Include="C:\work\projects\arrow\cpp\src\arrow\types\string.cc"  />
+    <ClCompile Include="C:\work\projects\arrow\cpp\src\arrow\types\struct.cc"  />
+    <ClCompile Include="C:\work\projects\arrow\cpp\src\arrow\types\union.cc"  />
+    <ClCompile Include="C:\work\projects\arrow\cpp\src\arrow\util\bit-util.cc"  />
+    <ClCompile Include="C:\work\projects\arrow\cpp\src\arrow\util\buffer.cc"  />
+    <ClCompile Include="C:\work\projects\arrow\cpp\src\arrow\util\memory-pool.cc"  />
+    <ClCompile Include="C:\work\projects\arrow\cpp\src\arrow\util\status.cc"  />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="C:/work/projects/arrow/cpp/ZERO_CHECK.vcxproj">
+      <Project>73703FD9-C02C-43ED-A190-44C743BB7960</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/work/projects/arrow/cpp/src/arrow/ipc/metadata_fbs.vcxproj">
+      <Project>B5B9B1E0-30F5-42D8-9F8F-9B731E8811C5</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

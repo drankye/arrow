@@ -1,0 +1,336 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|x64">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|x64">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGUID>{9AA23BD9-7A45-4A52-AF5A-E19C2BCEAF48}</ProjectGUID>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>x64</Platform>
+    <ProjectName>ipc-adapter-test</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+    <PropertyGroup>
+      <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\work\projects\arrow\cpp\build\debug\Debug\</OutDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">ipc-adapter-test.dir\Debug\</IntDir>
+      <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">ipc-adapter-test</TargetName>
+      <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.exe</TargetExt>
+      <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
+      <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</GenerateManifest>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\work\projects\arrow\cpp\build\debug\Release\</OutDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">ipc-adapter-test.dir\Release\</IntDir>
+      <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">ipc-adapter-test</TargetName>
+      <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.exe</TargetExt>
+      <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
+      <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</GenerateManifest>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\work\projects\arrow\cpp\build\debug\MinSizeRel\</OutDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">ipc-adapter-test.dir\MinSizeRel\</IntDir>
+      <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">ipc-adapter-test</TargetName>
+      <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">.exe</TargetExt>
+      <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkIncremental>
+      <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">true</GenerateManifest>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\work\projects\arrow\cpp\build\debug\RelWithDebInfo\</OutDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">ipc-adapter-test.dir\RelWithDebInfo\</IntDir>
+      <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">ipc-adapter-test</TargetName>
+      <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">.exe</TargetExt>
+      <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</LinkIncremental>
+      <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</GenerateManifest>
+    </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalOptions> -std=c++11 -ggdb -O0 -fPIC %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalIncludeDirectories>C:\work\projects\arrow\cpp\src;C:\work\projects\arrow\cpp\thirdparty\googletest-release-1.7.0\include;C:\work\projects\arrow\cpp\thirdparty\installed\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>Debug/</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <WarningLevel>EnableAllWarnings</WarningLevel>
+      <PreprocessorDefinitions>_DEBUG;CMAKE_INTDIR="Debug";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;CMAKE_INTDIR=\"Debug\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\work\projects\arrow\cpp\src;C:\work\projects\arrow\cpp\thirdparty\googletest-release-1.7.0\include;C:\work\projects\arrow\cpp\thirdparty\installed\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\work\projects\arrow\cpp\src;C:\work\projects\arrow\cpp\thirdparty\googletest-release-1.7.0\include;C:\work\projects\arrow\cpp\thirdparty\installed\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalOptions> /machine:x64 /debug %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;..\..\..\build\debug\Debug\arrow.lib;..\..\..\build\debug\Debug\arrow_test_main.lib;..\..\..\thirdparty\googletest-release-1.7.0\gtest.lib;</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/work/projects/arrow/cpp/build/debug/Debug/ipc-adapter-test.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/work/projects/arrow/cpp/build/debug/Debug/ipc-adapter-test.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+      <Version></Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalOptions> -std=c++11 -ggdb -O0 -fPIC %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalIncludeDirectories>C:\work\projects\arrow\cpp\src;C:\work\projects\arrow\cpp\thirdparty\googletest-release-1.7.0\include;C:\work\projects\arrow\cpp\thirdparty\installed\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>Release/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <WarningLevel>EnableAllWarnings</WarningLevel>
+      <PreprocessorDefinitions>NDEBUG;CMAKE_INTDIR="Release";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat></DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;CMAKE_INTDIR=\"Release\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\work\projects\arrow\cpp\src;C:\work\projects\arrow\cpp\thirdparty\googletest-release-1.7.0\include;C:\work\projects\arrow\cpp\thirdparty\installed\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\work\projects\arrow\cpp\src;C:\work\projects\arrow\cpp\thirdparty\googletest-release-1.7.0\include;C:\work\projects\arrow\cpp\thirdparty\installed\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalOptions> /machine:x64 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;..\..\..\build\debug\Release\arrow.lib;..\..\..\build\debug\Release\arrow_test_main.lib;..\..\..\thirdparty\googletest-release-1.7.0\gtest.lib;</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/work/projects/arrow/cpp/build/debug/Release/ipc-adapter-test.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/work/projects/arrow/cpp/build/debug/Release/ipc-adapter-test.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+      <Version></Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+    <ClCompile>
+      <AdditionalOptions> -std=c++11 -ggdb -O0 -fPIC %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalIncludeDirectories>C:\work\projects\arrow\cpp\src;C:\work\projects\arrow\cpp\thirdparty\googletest-release-1.7.0\include;C:\work\projects\arrow\cpp\thirdparty\installed\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>MinSizeRel/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <WarningLevel>EnableAllWarnings</WarningLevel>
+      <PreprocessorDefinitions>NDEBUG;CMAKE_INTDIR="MinSizeRel";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat></DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;CMAKE_INTDIR=\"MinSizeRel\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\work\projects\arrow\cpp\src;C:\work\projects\arrow\cpp\thirdparty\googletest-release-1.7.0\include;C:\work\projects\arrow\cpp\thirdparty\installed\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\work\projects\arrow\cpp\src;C:\work\projects\arrow\cpp\thirdparty\googletest-release-1.7.0\include;C:\work\projects\arrow\cpp\thirdparty\installed\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalOptions> /machine:x64 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;..\..\..\build\debug\MinSizeRel\arrow.lib;..\..\..\build\debug\MinSizeRel\arrow_test_main.lib;..\..\..\thirdparty\googletest-release-1.7.0\gtest.lib;</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/work/projects/arrow/cpp/build/debug/MinSizeRel/ipc-adapter-test.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/work/projects/arrow/cpp/build/debug/MinSizeRel/ipc-adapter-test.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+      <Version></Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    <ClCompile>
+      <AdditionalOptions> -std=c++11 -ggdb -O0 -fPIC %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalIncludeDirectories>C:\work\projects\arrow\cpp\src;C:\work\projects\arrow\cpp\thirdparty\googletest-release-1.7.0\include;C:\work\projects\arrow\cpp\thirdparty\installed\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>RelWithDebInfo/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <WarningLevel>EnableAllWarnings</WarningLevel>
+      <PreprocessorDefinitions>NDEBUG;CMAKE_INTDIR="RelWithDebInfo";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;CMAKE_INTDIR=\"RelWithDebInfo\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\work\projects\arrow\cpp\src;C:\work\projects\arrow\cpp\thirdparty\googletest-release-1.7.0\include;C:\work\projects\arrow\cpp\thirdparty\installed\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\work\projects\arrow\cpp\src;C:\work\projects\arrow\cpp\thirdparty\googletest-release-1.7.0\include;C:\work\projects\arrow\cpp\thirdparty\installed\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalOptions> /machine:x64 /debug %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;..\..\..\build\debug\RelWithDebInfo\arrow.lib;..\..\..\build\debug\RelWithDebInfo\arrow_test_main.lib;..\..\..\thirdparty\googletest-release-1.7.0\gtest.lib;</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/work/projects/arrow/cpp/build/debug/RelWithDebInfo/ipc-adapter-test.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/work/projects/arrow/cpp/build/debug/RelWithDebInfo/ipc-adapter-test.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+      <Version></Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\work\projects\arrow\cpp\src\arrow\ipc\CMakeLists.txt">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/work/projects/arrow/cpp/src/arrow/ipc/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+C:\work\cmake\bin\cmake.exe -HC:/work/projects/arrow/cpp -BC:/work/projects/arrow/cpp --check-stamp-file C:\work\projects\arrow\cpp\src\arrow\ipc\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/work/projects/arrow/cpp/src/arrow/ipc/CMakeLists.txt;C:\work\projects\arrow\cpp\src\arrow\ipc\CMakeLists.txt;C:\work\projects\arrow\cpp\src\arrow\ipc\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\work\projects\arrow\cpp\src\arrow\ipc\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/work/projects/arrow/cpp/src/arrow/ipc/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+C:\work\cmake\bin\cmake.exe -HC:/work/projects/arrow/cpp -BC:/work/projects/arrow/cpp --check-stamp-file C:\work\projects\arrow\cpp\src\arrow\ipc\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/work/projects/arrow/cpp/src/arrow/ipc/CMakeLists.txt;C:\work\projects\arrow\cpp\src\arrow\ipc\CMakeLists.txt;C:\work\projects\arrow\cpp\src\arrow\ipc\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\work\projects\arrow\cpp\src\arrow\ipc\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule C:/work/projects/arrow/cpp/src/arrow/ipc/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+C:\work\cmake\bin\cmake.exe -HC:/work/projects/arrow/cpp -BC:/work/projects/arrow/cpp --check-stamp-file C:\work\projects\arrow\cpp\src\arrow\ipc\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:/work/projects/arrow/cpp/src/arrow/ipc/CMakeLists.txt;C:\work\projects\arrow\cpp\src\arrow\ipc\CMakeLists.txt;C:\work\projects\arrow\cpp\src\arrow\ipc\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\work\projects\arrow\cpp\src\arrow\ipc\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule C:/work/projects/arrow/cpp/src/arrow/ipc/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+C:\work\cmake\bin\cmake.exe -HC:/work/projects/arrow/cpp -BC:/work/projects/arrow/cpp --check-stamp-file C:\work\projects\arrow\cpp\src\arrow\ipc\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:/work/projects/arrow/cpp/src/arrow/ipc/CMakeLists.txt;C:\work\projects\arrow\cpp\src\arrow\ipc\CMakeLists.txt;C:\work\projects\arrow\cpp\src\arrow\ipc\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\work\projects\arrow\cpp\src\arrow\ipc\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="C:\work\projects\arrow\cpp\src\arrow\ipc\ipc-adapter-test.cc"  />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="C:/work/projects/arrow/cpp/ZERO_CHECK.vcxproj">
+      <Project>73703FD9-C02C-43ED-A190-44C743BB7960</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/work/projects/arrow/cpp/arrow.vcxproj">
+      <Project>06C472BE-4676-4457-A8DF-75ED7AFEBA33</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/work/projects/arrow/cpp/src/arrow/util/arrow_test_main.vcxproj">
+      <Project>1687DDD9-885F-4651-B146-52460328A47F</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

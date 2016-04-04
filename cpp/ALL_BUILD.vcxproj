@@ -1,0 +1,223 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|x64">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|x64">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGUID>{8634EF46-D011-4B51-A06A-7C1176E965B6}</ProjectGUID>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>x64</Platform>
+    <ProjectName>ALL_BUILD</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+    <PropertyGroup>
+      <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>C:\work\projects\arrow\cpp\src;C:\work\projects\arrow\cpp\thirdparty\googletest-release-1.7.0\include;C:\work\projects\arrow\cpp\thirdparty\installed\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>C:\work\projects\arrow\cpp\src;C:\work\projects\arrow\cpp\thirdparty\googletest-release-1.7.0\include;C:\work\projects\arrow\cpp\thirdparty\installed\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>C:\work\projects\arrow\cpp\src;C:\work\projects\arrow\cpp\thirdparty\googletest-release-1.7.0\include;C:\work\projects\arrow\cpp\thirdparty\installed\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>C:\work\projects\arrow\cpp\src;C:\work\projects\arrow\cpp\thirdparty\googletest-release-1.7.0\include;C:\work\projects\arrow\cpp\thirdparty\installed\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\work\projects\arrow\cpp\CMakeLists.txt">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/work/projects/arrow/cpp/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+C:\work\cmake\bin\cmake.exe -HC:/work/projects/arrow/cpp -BC:/work/projects/arrow/cpp --check-stamp-file C:\work\projects\arrow\cpp\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/work/projects/arrow/cpp/CMakeLists.txt;C:\work\projects\arrow\cpp\CMakeLists.txt;C:\work\projects\arrow\cpp\CMakeFiles\3.3.2\CMakeSystem.cmake;C:\work\cmake\share\cmake-3.3\Modules\CMakeSystemSpecificInitialize.cmake;C:\work\projects\arrow\cpp\CMakeFiles\3.3.2\CMakeCCompiler.cmake;C:\work\projects\arrow\cpp\CMakeFiles\3.3.2\CMakeCXXCompiler.cmake;C:\work\cmake\share\cmake-3.3\Modules\CMakeSystemSpecificInformation.cmake;C:\work\cmake\share\cmake-3.3\Modules\CMakeGenericSystem.cmake;C:\work\cmake\share\cmake-3.3\Modules\Platform\Windows.cmake;C:\work\cmake\share\cmake-3.3\Modules\Platform\WindowsPaths.cmake;C:\work\cmake\share\cmake-3.3\Modules\CMakeCInformation.cmake;C:\work\cmake\share\cmake-3.3\Modules\Platform\Windows-MSVC-C.cmake;C:\work\cmake\share\cmake-3.3\Modules\Platform\Windows-MSVC.cmake;C:\work\projects\arrow\cpp\CMakeFiles\3.3.2\CMakeRCCompiler.cmake;C:\work\cmake\share\cmake-3.3\Modules\CMakeRCInformation.cmake;C:\work\cmake\share\cmake-3.3\Modules\CMakeCommonLanguageInclude.cmake;C:\work\cmake\share\cmake-3.3\Modules\CMakeCXXInformation.cmake;C:\work\cmake\share\cmake-3.3\Modules\Compiler\MSVC-CXX.cmake;C:\work\cmake\share\cmake-3.3\Modules\Platform\Windows-MSVC-CXX.cmake;C:\work\cmake\share\cmake-3.3\Modules\Platform\Windows-MSVC.cmake;C:\work\cmake\share\cmake-3.3\Modules\CMakeCommonLanguageInclude.cmake;C:\work\cmake\share\cmake-3.3\Modules\CMakeParseArguments.cmake;C:\work\projects\arrow\cpp\cmake_modules\FindClangTools.cmake;C:\work\cmake\share\cmake-3.3\Modules\CheckCXXCompilerFlag.cmake;C:\work\cmake\share\cmake-3.3\Modules\CheckCXXSourceCompiles.cmake;C:\work\cmake\share\cmake-3.3\Modules\CMakeCheckCompilerFlagCommonPatterns.cmake;C:\work\projects\arrow\cpp\cmake_modules\CompilerInfo.cmake;C:\work\projects\arrow\cpp\cmake_modules\san-config.cmake;C:\work\projects\arrow\cpp\cmake_modules\FindGTest.cmake;C:\work\projects\arrow\cpp\cmake_modules\FindFlatbuffers.cmake;C:\work\projects\arrow\cpp\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\work\projects\arrow\cpp\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/work/projects/arrow/cpp/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+C:\work\cmake\bin\cmake.exe -HC:/work/projects/arrow/cpp -BC:/work/projects/arrow/cpp --check-stamp-file C:\work\projects\arrow\cpp\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/work/projects/arrow/cpp/CMakeLists.txt;C:\work\projects\arrow\cpp\CMakeLists.txt;C:\work\projects\arrow\cpp\CMakeFiles\3.3.2\CMakeSystem.cmake;C:\work\cmake\share\cmake-3.3\Modules\CMakeSystemSpecificInitialize.cmake;C:\work\projects\arrow\cpp\CMakeFiles\3.3.2\CMakeCCompiler.cmake;C:\work\projects\arrow\cpp\CMakeFiles\3.3.2\CMakeCXXCompiler.cmake;C:\work\cmake\share\cmake-3.3\Modules\CMakeSystemSpecificInformation.cmake;C:\work\cmake\share\cmake-3.3\Modules\CMakeGenericSystem.cmake;C:\work\cmake\share\cmake-3.3\Modules\Platform\Windows.cmake;C:\work\cmake\share\cmake-3.3\Modules\Platform\WindowsPaths.cmake;C:\work\cmake\share\cmake-3.3\Modules\CMakeCInformation.cmake;C:\work\cmake\share\cmake-3.3\Modules\Platform\Windows-MSVC-C.cmake;C:\work\cmake\share\cmake-3.3\Modules\Platform\Windows-MSVC.cmake;C:\work\projects\arrow\cpp\CMakeFiles\3.3.2\CMakeRCCompiler.cmake;C:\work\cmake\share\cmake-3.3\Modules\CMakeRCInformation.cmake;C:\work\cmake\share\cmake-3.3\Modules\CMakeCommonLanguageInclude.cmake;C:\work\cmake\share\cmake-3.3\Modules\CMakeCXXInformation.cmake;C:\work\cmake\share\cmake-3.3\Modules\Compiler\MSVC-CXX.cmake;C:\work\cmake\share\cmake-3.3\Modules\Platform\Windows-MSVC-CXX.cmake;C:\work\cmake\share\cmake-3.3\Modules\Platform\Windows-MSVC.cmake;C:\work\cmake\share\cmake-3.3\Modules\CMakeCommonLanguageInclude.cmake;C:\work\cmake\share\cmake-3.3\Modules\CMakeParseArguments.cmake;C:\work\projects\arrow\cpp\cmake_modules\FindClangTools.cmake;C:\work\cmake\share\cmake-3.3\Modules\CheckCXXCompilerFlag.cmake;C:\work\cmake\share\cmake-3.3\Modules\CheckCXXSourceCompiles.cmake;C:\work\cmake\share\cmake-3.3\Modules\CMakeCheckCompilerFlagCommonPatterns.cmake;C:\work\projects\arrow\cpp\cmake_modules\CompilerInfo.cmake;C:\work\projects\arrow\cpp\cmake_modules\san-config.cmake;C:\work\projects\arrow\cpp\cmake_modules\FindGTest.cmake;C:\work\projects\arrow\cpp\cmake_modules\FindFlatbuffers.cmake;C:\work\projects\arrow\cpp\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\work\projects\arrow\cpp\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule C:/work/projects/arrow/cpp/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+C:\work\cmake\bin\cmake.exe -HC:/work/projects/arrow/cpp -BC:/work/projects/arrow/cpp --check-stamp-file C:\work\projects\arrow\cpp\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:/work/projects/arrow/cpp/CMakeLists.txt;C:\work\projects\arrow\cpp\CMakeLists.txt;C:\work\projects\arrow\cpp\CMakeFiles\3.3.2\CMakeSystem.cmake;C:\work\cmake\share\cmake-3.3\Modules\CMakeSystemSpecificInitialize.cmake;C:\work\projects\arrow\cpp\CMakeFiles\3.3.2\CMakeCCompiler.cmake;C:\work\projects\arrow\cpp\CMakeFiles\3.3.2\CMakeCXXCompiler.cmake;C:\work\cmake\share\cmake-3.3\Modules\CMakeSystemSpecificInformation.cmake;C:\work\cmake\share\cmake-3.3\Modules\CMakeGenericSystem.cmake;C:\work\cmake\share\cmake-3.3\Modules\Platform\Windows.cmake;C:\work\cmake\share\cmake-3.3\Modules\Platform\WindowsPaths.cmake;C:\work\cmake\share\cmake-3.3\Modules\CMakeCInformation.cmake;C:\work\cmake\share\cmake-3.3\Modules\Platform\Windows-MSVC-C.cmake;C:\work\cmake\share\cmake-3.3\Modules\Platform\Windows-MSVC.cmake;C:\work\projects\arrow\cpp\CMakeFiles\3.3.2\CMakeRCCompiler.cmake;C:\work\cmake\share\cmake-3.3\Modules\CMakeRCInformation.cmake;C:\work\cmake\share\cmake-3.3\Modules\CMakeCommonLanguageInclude.cmake;C:\work\cmake\share\cmake-3.3\Modules\CMakeCXXInformation.cmake;C:\work\cmake\share\cmake-3.3\Modules\Compiler\MSVC-CXX.cmake;C:\work\cmake\share\cmake-3.3\Modules\Platform\Windows-MSVC-CXX.cmake;C:\work\cmake\share\cmake-3.3\Modules\Platform\Windows-MSVC.cmake;C:\work\cmake\share\cmake-3.3\Modules\CMakeCommonLanguageInclude.cmake;C:\work\cmake\share\cmake-3.3\Modules\CMakeParseArguments.cmake;C:\work\projects\arrow\cpp\cmake_modules\FindClangTools.cmake;C:\work\cmake\share\cmake-3.3\Modules\CheckCXXCompilerFlag.cmake;C:\work\cmake\share\cmake-3.3\Modules\CheckCXXSourceCompiles.cmake;C:\work\cmake\share\cmake-3.3\Modules\CMakeCheckCompilerFlagCommonPatterns.cmake;C:\work\projects\arrow\cpp\cmake_modules\CompilerInfo.cmake;C:\work\projects\arrow\cpp\cmake_modules\san-config.cmake;C:\work\projects\arrow\cpp\cmake_modules\FindGTest.cmake;C:\work\projects\arrow\cpp\cmake_modules\FindFlatbuffers.cmake;C:\work\projects\arrow\cpp\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\work\projects\arrow\cpp\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule C:/work/projects/arrow/cpp/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+C:\work\cmake\bin\cmake.exe -HC:/work/projects/arrow/cpp -BC:/work/projects/arrow/cpp --check-stamp-file C:\work\projects\arrow\cpp\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:/work/projects/arrow/cpp/CMakeLists.txt;C:\work\projects\arrow\cpp\CMakeLists.txt;C:\work\projects\arrow\cpp\CMakeFiles\3.3.2\CMakeSystem.cmake;C:\work\cmake\share\cmake-3.3\Modules\CMakeSystemSpecificInitialize.cmake;C:\work\projects\arrow\cpp\CMakeFiles\3.3.2\CMakeCCompiler.cmake;C:\work\projects\arrow\cpp\CMakeFiles\3.3.2\CMakeCXXCompiler.cmake;C:\work\cmake\share\cmake-3.3\Modules\CMakeSystemSpecificInformation.cmake;C:\work\cmake\share\cmake-3.3\Modules\CMakeGenericSystem.cmake;C:\work\cmake\share\cmake-3.3\Modules\Platform\Windows.cmake;C:\work\cmake\share\cmake-3.3\Modules\Platform\WindowsPaths.cmake;C:\work\cmake\share\cmake-3.3\Modules\CMakeCInformation.cmake;C:\work\cmake\share\cmake-3.3\Modules\Platform\Windows-MSVC-C.cmake;C:\work\cmake\share\cmake-3.3\Modules\Platform\Windows-MSVC.cmake;C:\work\projects\arrow\cpp\CMakeFiles\3.3.2\CMakeRCCompiler.cmake;C:\work\cmake\share\cmake-3.3\Modules\CMakeRCInformation.cmake;C:\work\cmake\share\cmake-3.3\Modules\CMakeCommonLanguageInclude.cmake;C:\work\cmake\share\cmake-3.3\Modules\CMakeCXXInformation.cmake;C:\work\cmake\share\cmake-3.3\Modules\Compiler\MSVC-CXX.cmake;C:\work\cmake\share\cmake-3.3\Modules\Platform\Windows-MSVC-CXX.cmake;C:\work\cmake\share\cmake-3.3\Modules\Platform\Windows-MSVC.cmake;C:\work\cmake\share\cmake-3.3\Modules\CMakeCommonLanguageInclude.cmake;C:\work\cmake\share\cmake-3.3\Modules\CMakeParseArguments.cmake;C:\work\projects\arrow\cpp\cmake_modules\FindClangTools.cmake;C:\work\cmake\share\cmake-3.3\Modules\CheckCXXCompilerFlag.cmake;C:\work\cmake\share\cmake-3.3\Modules\CheckCXXSourceCompiles.cmake;C:\work\cmake\share\cmake-3.3\Modules\CMakeCheckCompilerFlagCommonPatterns.cmake;C:\work\projects\arrow\cpp\cmake_modules\CompilerInfo.cmake;C:\work\projects\arrow\cpp\cmake_modules\san-config.cmake;C:\work\projects\arrow\cpp\cmake_modules\FindGTest.cmake;C:\work\projects\arrow\cpp\cmake_modules\FindFlatbuffers.cmake;C:\work\projects\arrow\cpp\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\work\projects\arrow\cpp\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="C:/work/projects/arrow/cpp/ZERO_CHECK.vcxproj">
+      <Project>73703FD9-C02C-43ED-A190-44C743BB7960</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/work/projects/arrow/cpp/src/arrow/array-test.vcxproj">
+      <Project>CD0E1F45-6352-49CB-B703-6160F4505F8D</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/work/projects/arrow/cpp/arrow.vcxproj">
+      <Project>06C472BE-4676-4457-A8DF-75ED7AFEBA33</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/work/projects/arrow/cpp/src/arrow/util/arrow_test_main.vcxproj">
+      <Project>1687DDD9-885F-4651-B146-52460328A47F</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/work/projects/arrow/cpp/src/arrow/util/bit-util-test.vcxproj">
+      <Project>F6F7A25B-8168-4C46-BD21-C2D9868E471A</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/work/projects/arrow/cpp/src/arrow/util/buffer-test.vcxproj">
+      <Project>BAE538F9-F321-4DCF-AD17-D4E9603B6297</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/work/projects/arrow/cpp/src/arrow/column-test.vcxproj">
+      <Project>419B42F2-B0FD-4D4F-B46C-E9A0C959940F</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/work/projects/arrow/cpp/src/arrow/types/decimal-test.vcxproj">
+      <Project>0AF6C51E-11D1-49E4-A52B-E915185F0006</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/work/projects/arrow/cpp/src/arrow/ipc/ipc-adapter-test.vcxproj">
+      <Project>9AA23BD9-7A45-4A52-AF5A-E19C2BCEAF48</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/work/projects/arrow/cpp/src/arrow/ipc/ipc-memory-test.vcxproj">
+      <Project>5147F3AB-EF2B-4750-A89B-5630EC47CD29</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/work/projects/arrow/cpp/src/arrow/ipc/ipc-metadata-test.vcxproj">
+      <Project>93D6EE58-106F-43F3-8AE1-2E4AAFD2C55B</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/work/projects/arrow/cpp/src/arrow/types/list-test.vcxproj">
+      <Project>28A0F17C-2062-456C-9C27-6D3679CFA7A4</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/work/projects/arrow/cpp/src/arrow/util/memory-pool-test.vcxproj">
+      <Project>E5BFE61C-8197-4488-8122-2B00944C6A21</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/work/projects/arrow/cpp/src/arrow/types/primitive-test.vcxproj">
+      <Project>2126EFE6-0333-4A56-8219-C1FE5CA66E11</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/work/projects/arrow/cpp/src/arrow/schema-test.vcxproj">
+      <Project>195FBECF-5766-4457-9802-A2F32CE702BB</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/work/projects/arrow/cpp/src/arrow/types/string-test.vcxproj">
+      <Project>E60AC083-B44F-4691-A9B6-28F1927355DB</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/work/projects/arrow/cpp/src/arrow/types/struct-test.vcxproj">
+      <Project>1E03A966-12B0-4F2E-8AEB-B3F38F3C0EAC</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/work/projects/arrow/cpp/src/arrow/table-test.vcxproj">
+      <Project>E59DB94B-1E2E-4EFF-BAE8-0DE404D31D79</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

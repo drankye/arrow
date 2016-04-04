@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\work\projects\arrow\cpp\src\arrow\ipc\CMakeLists.txt" />
+    <CustomBuild Include="C:\work\projects\arrow\cpp\CMakeFiles\07ef63651d63882d3d8202e1528f2b11\Message_generated.h.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\work\projects\arrow\cpp\CMakeFiles\ec53a7fb829add50038c44b3e3da932d\metadata_fbs.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="C:\work\projects\arrow\cpp\src\arrow\ipc\CMakeFiles\metadata_fbs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{64B07981-690B-42C2-8768-97FA72E35FB2}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
